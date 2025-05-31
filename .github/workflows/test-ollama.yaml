@@ -3,13 +3,21 @@ jobs:
   ollama:
     runs-on: ubuntu-24.04
     steps:
+      - name: Run shell commands
+        run: |
+          free -h
+          df -h
+          lscpu
       - name: Run model
         uses: ai-action/ollama-action@v1
         id: model
         with:
-          model: qwen2.5-coder:14b
+          model: qwen2.5-coder:32b
           prompt: Explain the basics of machine learning.
-
+      - name: Run shell commands
+        run: |
+          free -h
+          df -h
       - name: Print response
         run: echo "$response"
         env:
