@@ -3,6 +3,10 @@ jobs:
   ollama:
     runs-on: ubuntu-24.04-arm
     steps:
+      - name: Set Swap Space
+        uses: pierotofy/set-swap-space@master
+        with:
+          swap-size-gb: 5
       - name: Run shell commands
         run: |
           free -h
