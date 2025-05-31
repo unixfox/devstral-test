@@ -1,7 +1,7 @@
 on: push
 jobs:
   ollama:
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-24.04-arm
     steps:
       - name: Run shell commands
         run: |
