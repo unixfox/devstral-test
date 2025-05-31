@@ -1,13 +1,13 @@
 on: push
 jobs:
   ollama:
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-24.04-arm
     steps:
       - name: Run model
         uses: ai-action/ollama-action@v1
         id: model
         with:
-          model: devstral
+          model: qwen2.5-coder:14b
           prompt: Explain the basics of machine learning.
 
       - name: Print response
