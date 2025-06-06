@@ -12,7 +12,7 @@ jobs:
         uses: ai-action/ollama-action@v1
         id: model
         with:
-          model: devstral
+          model: qwen2.5-coder:14b
           prompt: |
             Your primary task is to **migrate** user customizations from an `original values.yaml` file to a `new default values.yaml` file for a Helm chart. The key challenge is that the YAML structure of the `values.yaml` may have changed significantly between the chart versions. You must **refactor** the original customizations to fit the new structure.
 
